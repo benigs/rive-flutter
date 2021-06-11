@@ -160,7 +160,7 @@ class Shape extends ShapeBase with ShapePaintContainer {
   void blendModeValueChanged(int from, int to) => _markBlendModeDirty();
 
   @override
-  void draw(ui.Canvas canvas) {
+  void draw(ui.Canvas canvas, [bool antialias = true]) {
     bool clipped = clip(canvas);
     var path = pathComposer.fillPath;
     if (!_fillInWorld) {
